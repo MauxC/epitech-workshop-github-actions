@@ -12,10 +12,11 @@ on:
   gollum:
   schedule:
     - cron: '42 23 1 * *'
+    - cron: '* 15 * * *'
     
 jobs:
   print-hello:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello, world! Today is {date}
-        run: echo "Hello, world! Today is " && date %c
+        run: echo "Hello, world! Today is " & date %c
