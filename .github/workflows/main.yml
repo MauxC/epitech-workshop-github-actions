@@ -1,0 +1,21 @@
+name: Hello-World
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - closed
+  pull_request:
+    types:
+      - ready_for_review
+  gollum:
+  schedule:
+    - cron: '42 23 1 * *'
+    
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello, world! Today is {date}
+        run: echo "Hello, world! Today is " && date
