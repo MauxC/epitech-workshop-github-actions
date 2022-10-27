@@ -1,0 +1,21 @@
+name: Containers
+
+on:
+  workflow_dispatch:
+
+jobs:
+  alpine:
+    runs-on: ubuntu-latest
+    container: alpine:latest
+    steps:
+      - run: os-release
+  centos:
+    runs-on: ubintu-latest
+    container: centos:latest
+    steps:
+      - run: os-release
+  fedora:
+    runs-on: ubintu-latest
+    container: fedora:latest
+    steps:
+      - run: os-release
