@@ -7,7 +7,7 @@ jobs:
   ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - run: lsb_release -v
+      - run: lsb_release
 
   macos:
     runs-on: macos-latest
